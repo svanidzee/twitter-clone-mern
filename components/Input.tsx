@@ -1,5 +1,3 @@
-import React from 'react';
-
 interface InputProps {
   placeholder?: string;
   value?: string;
@@ -18,13 +16,15 @@ const Input: React.FC<InputProps> = ({
   label,
 }) => {
   return (
-    <input
-      disabled={disabled}
-      onChange={onChange}
-      value={value}
-      placeholder={placeholder}
-      type={type}
-      className='
+    <div className='w-full'>
+      {label && <p className='text-xl text-white font-semibold mb-2'>{label}</p>}
+      <input
+        disabled={disabled}
+        onChange={onChange}
+        value={value}
+        placeholder={placeholder}
+        type={type}
+        className='
           w-full
           p-4 
           text-lg 
@@ -41,7 +41,8 @@ const Input: React.FC<InputProps> = ({
           disabled:opacity-70
           disabled:cursor-not-allowed
         '
-    />
+      />
+    </div>
   );
 };
 

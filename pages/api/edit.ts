@@ -30,7 +30,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       },
     });
 
-    console.log(updatedUser);
     return res.status(200).json(updatedUser);
   } catch (error) {
     console.log(error);

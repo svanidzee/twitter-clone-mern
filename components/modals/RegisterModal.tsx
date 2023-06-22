@@ -1,13 +1,13 @@
+import axios from 'axios';
+import { toast } from 'react-hot-toast';
 import { useCallback, useState } from 'react';
 import { signIn } from 'next-auth/react';
-import { toast } from 'react-hot-toast';
 
 import useLoginModal from '@/hooks/useLoginModal';
 import useRegisterModal from '@/hooks/useRegisterModal';
 
 import Input from '../Input';
 import Modal from '../Modal';
-import axios from 'axios';
 
 const RegisterModal = () => {
   const loginModal = useLoginModal();
@@ -98,6 +98,7 @@ const RegisterModal = () => {
             cursor-pointer 
             hover:underline
           '>
+          {' '}
           Sign in
         </span>
       </p>

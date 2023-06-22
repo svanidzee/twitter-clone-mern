@@ -10,11 +10,19 @@ interface SidebarItemProps {
   label: string;
   icon: IconType;
   href?: string;
-  auth?: boolean;
   onClick?: () => void;
+  auth?: boolean;
+  alert?: boolean;
 }
 
-const SidebarItem: React.FC<SidebarItemProps> = ({ label, icon: Icon, href, onClick, auth }) => {
+const SidebarItem: React.FC<SidebarItemProps> = ({
+  label,
+  icon: Icon,
+  href,
+  auth,
+  onClick,
+  alert,
+}) => {
   const router = useRouter();
   const loginModal = useLoginModal();
 
@@ -50,6 +58,7 @@ const SidebarItem: React.FC<SidebarItemProps> = ({ label, icon: Icon, href, onCl
         lg:hidden
       '>
         <Icon size={28} color='white' />
+        {alert ? <BsDot className='text-sky-500 absolute -top-4 left-0' size={70} /> : null}
       </div>
       <div
         className='
@@ -67,6 +76,7 @@ const SidebarItem: React.FC<SidebarItemProps> = ({ label, icon: Icon, href, onCl
       '>
         <Icon size={24} color='white' />
         <p className='hidden lg:block text-white text-xl'>{label}</p>
+        {alert ? <BsDot className='text-sky-500 absolute -top-4 left-0' size={70} /> : null}
       </div>
     </div>
   );

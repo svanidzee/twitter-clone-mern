@@ -15,7 +15,6 @@ const Avatar: React.FC<AvatarProps> = ({ userId, isLarge, hasBorder }) => {
 
   const { data: fetchedUser } = useUser(userId);
 
-  //?
   const onClick = useCallback(
     (event: any) => {
       event.stopPropagation();

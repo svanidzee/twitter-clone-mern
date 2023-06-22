@@ -61,6 +61,7 @@ const Modal: React.FC<ModalProps> = ({
           bg-opacity-70
         '>
         <div className='relative w-full lg:w-3/6 my-6 mx-auto lg:max-w-3xl h-full lg:h-auto'>
+          {/*content*/}
           <div
             className='
             h-full
@@ -76,6 +77,7 @@ const Modal: React.FC<ModalProps> = ({
             outline-none 
             focus:outline-none
             '>
+            {/*header*/}
             <div
               className='
               flex 
@@ -98,7 +100,9 @@ const Modal: React.FC<ModalProps> = ({
                 <AiOutlineClose size={20} />
               </button>
             </div>
+            {/*body*/}
             <div className='relative p-10 flex-auto'>{body}</div>
+            {/*footer*/}
             <div className='flex flex-col gap-2 p-10'>
               <Button
                 disabled={disabled}
