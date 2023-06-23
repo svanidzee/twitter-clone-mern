@@ -1,6 +1,6 @@
-import PostFeed from '@/components/posts/PostFeed';
-import Header from '@/components/Header';
-import Form from '@/components/Form';
+import PostFeed from '@/components/posts/postFeed';
+import Header from '@/components/header';
+import Form from '@/components/form';
 
 export default function Home() {
   return (

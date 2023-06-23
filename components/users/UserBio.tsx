@@ -6,14 +6,13 @@ import useCurrentUser from '@/hooks/useCurrentUser';
 import useUser from '@/hooks/useUser';
 import useFollow from '@/hooks/useFollow';
 import useEditModal from '@/hooks/useEditModal';
-
-import Button from '../Button';
+import Button from '../button';
 
 interface UserBioProps {
   userId: string;
 }
 
-const UserBio: React.FC<UserBioProps> = ({ userId }) => {
+const UserBio = ({ userId }: UserBioProps) => {
   const { data: currentUser } = useCurrentUser();
   const { data: fetchedUser } = useUser(userId);
 

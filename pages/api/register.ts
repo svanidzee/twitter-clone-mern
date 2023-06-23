@@ -1,5 +1,5 @@
-import bcrypt from 'bcrypt';
 import { NextApiRequest, NextApiResponse } from 'next';
+import bcrypt from 'bcrypt';
 
 import prisma from '@/libs/prismadb';
 

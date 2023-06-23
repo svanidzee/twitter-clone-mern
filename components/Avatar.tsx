@@ -1,6 +1,6 @@
-import Image from 'next/image';
-import { useRouter } from 'next/router';
 import { useCallback } from 'react';
+import { useRouter } from 'next/router';
+import Image from 'next/image';
 
 import useUser from '@/hooks/useUser';
 
@@ -10,7 +10,8 @@ interface AvatarProps {
   hasBorder?: boolean;
 }
 
-const Avatar: React.FC<AvatarProps> = ({ userId, isLarge, hasBorder }) => {
+const Avatar = (props: AvatarProps) => {
+  const { userId, isLarge, hasBorder } = props;
   const router = useRouter();
 
   const { data: fetchedUser } = useUser(userId);

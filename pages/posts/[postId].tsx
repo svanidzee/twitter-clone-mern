@@ -2,11 +2,10 @@ import { useRouter } from 'next/router';
 import { ClipLoader } from 'react-spinners';
 
 import usePost from '@/hooks/usePost';
-
-import Header from '@/components/Header';
-import Form from '@/components/Form';
-import PostItem from '@/components/posts/PostItem';
-import CommentFeed from '@/components/posts/CommentFeed';
+import Header from '@/components/header';
+import Form from '@/components/form';
+import PostItem from '@/components/posts/postItem';
+import CommentFeed from '@/components/posts/commentFeed';
 
 const PostView = () => {
   const router = useRouter();

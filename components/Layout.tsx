@@ -1,9 +1,9 @@
 import React from 'react';
 
-import FollowBar from '@/components/layout/FollowBar';
-import Sidebar from '@/components/layout/Sidebar';
+import FollowBar from '@/components/layout/followBar';
+import Sidebar from '@/components/layout/sidebar';
 
-const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className='h-screen bg-black'>
       <div className='container h-full mx-auto xl:px-30 max-w-6xl'>

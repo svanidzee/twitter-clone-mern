@@ -1,10 +1,10 @@
-import React, { useCallback } from 'react';
-import { IconType } from 'react-icons';
+import React, { useCallback, MouseEventHandler } from 'react';
 import { useRouter } from 'next/router';
+import { BsDot } from 'react-icons/bs';
+import { IconType } from 'react-icons';
 
 import useLoginModal from '@/hooks/useLoginModal';
 import useCurrentUser from '@/hooks/useCurrentUser';
-import { BsDot } from 'react-icons/bs';
 
 interface SidebarItemProps {
   label: string;
@@ -15,14 +15,8 @@ interface SidebarItemProps {
   alert?: boolean;
 }
 
-const SidebarItem: React.FC<SidebarItemProps> = ({
-  label,
-  icon: Icon,
-  href,
-  auth,
-  onClick,
-  alert,
-}) => {
+const SidebarItem = (props: SidebarItemProps) => {
+  const { label, icon: Icon, href, auth, onClick, alert } = props;
   const router = useRouter();
   const loginModal = useLoginModal();
 

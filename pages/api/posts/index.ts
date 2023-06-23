@@ -25,6 +25,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     if (req.method === 'GET') {
       const { userId } = req.query;
+      console.log(req.query);
 
       console.log({ userId });
 

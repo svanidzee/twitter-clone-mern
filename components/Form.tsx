@@ -1,15 +1,14 @@
-import axios from 'axios';
 import { useCallback, useState } from 'react';
 import { toast } from 'react-hot-toast';
+import axios from 'axios';
 
 import useLoginModal from '@/hooks/useLoginModal';
 import useRegisterModal from '@/hooks/useRegisterModal';
 import useCurrentUser from '@/hooks/useCurrentUser';
 import usePosts from '@/hooks/usePosts';
 import usePost from '@/hooks/usePost';
-
-import Avatar from './Avatar';
-import Button from './Button';
+import Avatar from './avatar';
+import Button from './button';
 
 interface FormProps {
   placeholder: string;
@@ -17,7 +16,8 @@ interface FormProps {
   postId?: string;
 }
 
-const Form: React.FC<FormProps> = ({ placeholder, isComment, postId }) => {
+const Form = (props: FormProps) => {
+  const { placeholder, isComment, postId } = props;
   const registerModal = useRegisterModal();
   const loginModal = useLoginModal();
 

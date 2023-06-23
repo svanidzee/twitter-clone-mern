@@ -1,10 +1,10 @@
-import CommentItem from './CommentItem';
+import CommentItem from './commentItem';
 
 interface CommentFeedProps {
   comments?: Record<string, any>[];
 }
 
-const CommentFeed: React.FC<CommentFeedProps> = ({ comments = [] }) => {
+const CommentFeed = ({ comments = [] }: CommentFeedProps) => {
   return (
     <>
       {comments.map((comment: Record<string, any>) => (

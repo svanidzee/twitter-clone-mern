@@ -1,14 +1,14 @@
-import { useRouter } from 'next/router';
 import { useCallback, useMemo } from 'react';
+import { useRouter } from 'next/router';
 import { formatDistanceToNowStrict } from 'date-fns';
 
-import Avatar from '../Avatar';
+import Avatar from '../avatar';
 
 interface CommentItemProps {
   data: Record<string, any>;
 }
 
-const CommentItem: React.FC<CommentItemProps> = ({ data = {} }) => {
+const CommentItem = ({ data = {} }: CommentItemProps) => {
   const router = useRouter();
 
   const goToUser = useCallback(

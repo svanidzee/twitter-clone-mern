@@ -1,6 +1,7 @@
 import { useCallback } from 'react';
 import { AiOutlineClose } from 'react-icons/ai';
-import Button from './Button';
+
+import Button from './button';
 
 interface ModalProps {
   isOpen?: boolean;
@@ -13,16 +14,9 @@ interface ModalProps {
   disabled?: boolean;
 }
 
-const Modal: React.FC<ModalProps> = ({
-  isOpen,
-  onClose,
-  onSubmit,
-  title,
-  body,
-  actionLabel,
-  footer,
-  disabled,
-}) => {
+const Modal = (props: ModalProps) => {
+  const { isOpen, onClose, onSubmit, title, body, actionLabel, footer, disabled } = props;
+
   const handleClose = useCallback(() => {
     if (disabled) {
       return;
